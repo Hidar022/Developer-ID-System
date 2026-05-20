@@ -77,7 +77,7 @@ function Projects() {
   ];
 
   return (
-    <section className="relative z-40 px-6 md:px-14 py-28">
+    <section id="projects" className="relative z-40 px-6 md:px-14 py-28">
 
       {/* TITLE */}
       <motion.div

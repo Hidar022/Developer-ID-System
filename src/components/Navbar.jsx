@@ -193,7 +193,7 @@ function Navbar() {
 
           {/* CV BUTTON */}
           <a
-            href="/Aliyu-CV.pdf"
+            href="https://developer-id-system.vercel.app/Aliyu-CV.pdf"
             download
 
             className="

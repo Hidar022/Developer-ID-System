@@ -10,7 +10,10 @@ import {
 
 function Hero() {
   return (
-    <section className="relative z-40 px-6 md:px-14 pt-8 md:pt-14">
+    <section
+      id="home"
+      className="relative z-40 px-6 md:px-14 pt-8 md:pt-14"
+    >
 
       <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 items-center">
 
