@@ -65,21 +65,61 @@ function Hero() {
           </p>
 
           {/* BUTTONS */}
-          <div className="flex flex-wrap gap-5 mt-10">
+            <div className="
+              flex
+              flex-wrap
+              gap-5
+              mt-10
+            ">
 
-            <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-black px-8 py-4 rounded-2xl font-semibold hover:scale-105 transition-all duration-300 shadow-lg shadow-yellow-500/20">
+              {/* PROJECT BUTTON */}
+              <a
+                href="#projects"
 
-              View Projects →
+                className="
+                  bg-gradient-to-r
+                  from-yellow-400
+                  to-yellow-500
+                  text-black
+                  px-8
+                  py-4
+                  rounded-2xl
+                  font-semibold
+                  hover:scale-105
+                  transition-all
+                  duration-300
+                  shadow-lg
+                  shadow-yellow-500/20
+                "
+              >
 
-            </button>
+                View Projects →
 
-            <button className="border border-white/10 bg-white/5 backdrop-blur-md px-8 py-4 rounded-2xl hover:bg-white/10 transition-all duration-300">
+              </a>
 
-              Contact Me
+              {/* CONTACT BUTTON */}
+              <a
+                href="#contact"
 
-            </button>
+                className="
+                  border
+                  border-white/10
+                  bg-white/5
+                  backdrop-blur-md
+                  px-8
+                  py-4
+                  rounded-2xl
+                  hover:bg-white/10
+                  transition-all
+                  duration-300
+                "
+              >
 
-          </div>
+                Contact Me
+
+              </a>
+
+            </div>
 
           {/* STATUS */}
           <div className="flex items-center gap-3 mt-8">

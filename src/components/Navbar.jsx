@@ -1,12 +1,38 @@
 import { motion } from "framer-motion";
-import { Menu, Download } from "lucide-react";
+
+import {
+  Menu,
+  Download,
+} from "lucide-react";
 
 function Navbar() {
+
+  const navItems = [
+    ["Home", "home"],
+    ["About", "about"],
+    ["Skills", "skills"],
+    ["Projects", "projects"],
+    ["Certifications", "certifications"],
+    ["Contact", "contact"],
+  ];
+
   return (
+
     <motion.nav
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 1 }}
+      initial={{
+        y: -80,
+        opacity: 0,
+      }}
+
+      animate={{
+        y: 0,
+        opacity: 1,
+      }}
+
+      transition={{
+        duration: 1,
+      }}
+
       className="
         sticky
         top-0
@@ -37,7 +63,15 @@ function Navbar() {
       >
 
         {/* LOGO */}
-        <div className="flex items-center gap-4">
+        <a
+          href="#home"
+
+          className="
+            flex
+            items-center
+            gap-4
+          "
+        >
 
           {/* ICON */}
           <div
@@ -56,8 +90,14 @@ function Navbar() {
             "
           >
 
-            <span className="text-2xl font-black text-white">
+            <span className="
+              text-2xl
+              font-black
+              text-white
+            ">
+
               P
+
             </span>
 
           </div>
@@ -65,17 +105,29 @@ function Navbar() {
           {/* TEXT */}
           <div>
 
-            <h1 className="text-lg md:text-xl font-black text-white">
+            <h1 className="
+              text-lg
+              md:text-xl
+              font-black
+              text-white
+            ">
+
               Aliyu Bin Ahmad
+
             </h1>
 
-            <p className="text-sm text-gray-400">
+            <p className="
+              text-sm
+              text-gray-400
+            ">
+
               Python Backend Developer
+
             </p>
 
           </div>
 
-        </div>
+        </a>
 
         {/* NAV LINKS */}
         <ul
@@ -89,54 +141,61 @@ function Navbar() {
           "
         >
 
-          {[
-            "Home",
-            "About",
-            "Skills",
-            "Projects",
-            "Certifications",
-            "Contact",
-          ].map((item, index) => (
+          {navItems.map(
+            (item, index) => (
 
-            <li
-              key={index}
-              className="
-                relative
-                cursor-pointer
-                hover:text-yellow-400
-                transition-all
-                duration-300
-                group
-              "
-            >
+              <li key={index}>
 
-              {item}
+                <a
+                  href={`#${item[1]}`}
 
-              <span
-                className="
-                  absolute
-                  left-0
-                  -bottom-2
-                  w-0
-                  h-[2px]
-                  bg-yellow-400
-                  transition-all
-                  duration-300
-                  group-hover:w-full
-                "
-              ></span>
+                  className="
+                    relative
+                    cursor-pointer
+                    hover:text-yellow-400
+                    transition-all
+                    duration-300
+                    group
+                  "
+                >
 
-            </li>
+                  {item[0]}
 
-          ))}
+                  <span
+                    className="
+                      absolute
+                      left-0
+                      -bottom-2
+                      w-0
+                      h-[2px]
+                      bg-yellow-400
+                      transition-all
+                      duration-300
+                      group-hover:w-full
+                    "
+                  ></span>
+
+                </a>
+
+              </li>
+
+            )
+          )}
 
         </ul>
 
         {/* RIGHT SIDE */}
-        <div className="flex items-center gap-4">
+        <div className="
+          flex
+          items-center
+          gap-4
+        ">
 
           {/* CV BUTTON */}
-          <button
+          <a
+            href="/Aliyu-CV.pdf"
+            download
+
             className="
               hidden
               md:flex
@@ -162,7 +221,7 @@ function Navbar() {
 
             Download CV
 
-          </button>
+          </a>
 
           {/* MOBILE MENU */}
           <button
@@ -186,6 +245,7 @@ function Navbar() {
       </div>
 
     </motion.nav>
+
   );
 }
 
