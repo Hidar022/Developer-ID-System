@@ -7,8 +7,7 @@ import {
 function DeveloperQR() {
 
   // 🔥 YOUR VERIFICATION URL
-  const verifyURL =
-    "http://https://developer-id-system.vercel.app//verify/DEV-ALIYU-01";
+    const verifyURL = "https://developer-id-system.vercel.app/verify/DEV-ALIYU-01";
 
   return (
 
