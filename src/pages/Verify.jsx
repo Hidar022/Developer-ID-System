@@ -1,4 +1,4 @@
-import heroImage from "../assets/hero.png";
+import heroImage from "../assets/ID-card.png";
 import pythonLogo from "../assets/python.png";
 
 import {

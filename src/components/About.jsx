@@ -12,7 +12,7 @@ import {
   SiCyberdefenders,
 } from "react-icons/si";
 
-import heroImage from "../assets/hero.png";
+import heroImage from "../assets/about.png";
 
 function About() {
 
