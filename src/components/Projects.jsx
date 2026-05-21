@@ -20,10 +20,10 @@ function Projects() {
       tech: ["Django", "React", "REST API"],
 
       // 🔥 REPLACE THIS LATER WITH YOUR REAL LIVE LINK
-      live: "#",
+      live: "https://bin-datasub.vercel.app",
 
       // 🔥 REPLACE THIS LATER WITH YOUR REAL GITHUB LINK
-      github: "#",
+      github: "https://github.com/Hidar022/Bin_datasub",
     },
 
     {
@@ -34,8 +34,8 @@ function Projects() {
 
       tech: ["Python", "Django", "SQLite"],
 
-      live: "#",
-      github: "#",
+      live: "https://hidar022.pythonanywhere.com/",
+      github: "https://github.com/Hidar022/Tailoring_website",
     },
 
     {
@@ -46,8 +46,8 @@ function Projects() {
 
       tech: ["React", "Tailwind", "Django"],
 
-      live: "#",
-      github: "#",
+      live: "https://biz-dashboard-frontend.vercel.app/",
+      github: "https://github.com/Hidar022/BizDashboard",
     },
 
     {
@@ -58,8 +58,8 @@ function Projects() {
 
       tech: ["Python", "Database", "Django"],
 
-      live: "#",
-      github: "#",
+      live: "https://blood-bank-management-system-xi-six.vercel.app/",
+      github: "https://github.com/Hidar022/Blood-Bank-Management-System",
     },
 
     {
@@ -70,8 +70,8 @@ function Projects() {
 
       tech: ["React", "API", "Django"],
 
-      live: "#",
-      github: "#",
+      live: "https://ksitm-vlcp-roan.vercel.app/",
+      github: "https://github.com/Hidar022/KSITM-VLCP",
     },
 
   ];
