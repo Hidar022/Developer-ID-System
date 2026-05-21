@@ -14,7 +14,7 @@ const certs = [
 
     org: "Cisco Networking Academy",
 
-    year: "2024",
+    year: "2025",
 
     link: "/certificates/cybersecurity.pdf",
   },
@@ -24,7 +24,7 @@ const certs = [
 
     org: "Cisco Networking Academy",
 
-    year: "2024",
+    year: "2025",
 
     link: "/certificates/network-tech.pdf",
   },
@@ -34,7 +34,7 @@ const certs = [
 
     org: "KATDICT",
 
-    year: "2025",
+    year: "2024",
 
     link: "/certificates/web-dev.pdf",
   },

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroImage from "../assets/hero.png";
+import heroImage from "../assets/hero-dev.png";
 
 import {
   Code2,
