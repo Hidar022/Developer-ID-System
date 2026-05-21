@@ -1,11 +1,16 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import {
   Menu,
+  X,
   Download,
 } from "lucide-react";
 
+import { useState } from "react";
+
 function Navbar() {
+
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const navItems = [
     ["Home", "home"],
@@ -37,13 +42,13 @@ function Navbar() {
         sticky
         top-0
         z-50
-        px-6
+        px-4
         md:px-14
         py-5
       "
     >
 
-      {/* GLASS CONTAINER */}
+      {/* GLASS NAVBAR */}
       <div
         className="
           max-w-7xl
@@ -53,7 +58,8 @@ function Navbar() {
           border-white/10
           backdrop-blur-2xl
           rounded-3xl
-          px-6
+          px-5
+          md:px-6
           py-4
           flex
           items-center
@@ -69,15 +75,17 @@ function Navbar() {
           className="
             flex
             items-center
-            gap-4
+            gap-3
           "
         >
 
           {/* ICON */}
           <div
             className="
-              w-14
-              h-14
+              w-12
+              h-12
+              md:w-14
+              md:h-14
               rounded-2xl
               bg-gradient-to-br
               from-blue-500
@@ -90,11 +98,14 @@ function Navbar() {
             "
           >
 
-            <span className="
-              text-2xl
-              font-black
-              text-white
-            ">
+            <span
+              className="
+                text-xl
+                md:text-2xl
+                font-black
+                text-white
+              "
+            >
 
               P
 
@@ -105,21 +116,26 @@ function Navbar() {
           {/* TEXT */}
           <div>
 
-            <h1 className="
-              text-lg
-              md:text-xl
-              font-black
-              text-white
-            ">
+            <h1
+              className="
+                text-sm
+                md:text-xl
+                font-black
+                text-white
+              "
+            >
 
               Aliyu Bin Ahmad
 
             </h1>
 
-            <p className="
-              text-sm
-              text-gray-400
-            ">
+            <p
+              className="
+                text-xs
+                md:text-sm
+                text-gray-400
+              "
+            >
 
               Python Backend Developer
 
@@ -129,7 +145,7 @@ function Navbar() {
 
         </a>
 
-        {/* NAV LINKS */}
+        {/* DESKTOP NAV */}
         <ul
           className="
             hidden
@@ -141,59 +157,58 @@ function Navbar() {
           "
         >
 
-          {navItems.map(
-            (item, index) => (
+          {navItems.map((item, index) => (
 
-              <li key={index}>
+            <li key={index}>
 
-                <a
-                  href={`#${item[1]}`}
+              <a
+                href={`#${item[1]}`}
 
+                className="
+                  relative
+                  hover:text-yellow-400
+                  transition-all
+                  duration-300
+                  group
+                "
+              >
+
+                {item[0]}
+
+                <span
                   className="
-                    relative
-                    cursor-pointer
-                    hover:text-yellow-400
+                    absolute
+                    left-0
+                    -bottom-2
+                    w-0
+                    h-[2px]
+                    bg-yellow-400
                     transition-all
                     duration-300
-                    group
+                    group-hover:w-full
                   "
-                >
+                ></span>
 
-                  {item[0]}
+              </a>
 
-                  <span
-                    className="
-                      absolute
-                      left-0
-                      -bottom-2
-                      w-0
-                      h-[2px]
-                      bg-yellow-400
-                      transition-all
-                      duration-300
-                      group-hover:w-full
-                    "
-                  ></span>
+            </li>
 
-                </a>
-
-              </li>
-
-            )
-          )}
+          ))}
 
         </ul>
 
         {/* RIGHT SIDE */}
-        <div className="
-          flex
-          items-center
-          gap-4
-        ">
+        <div
+          className="
+            flex
+            items-center
+            gap-4
+          "
+        >
 
           {/* CV BUTTON */}
           <a
-            href="https://developer-id-system.vercel.app/Aliyu-CV.pdf"
+            href="/Aliyu-CV.pdf"
             download
 
             className="
@@ -223,8 +238,13 @@ function Navbar() {
 
           </a>
 
-          {/* MOBILE MENU */}
+          {/* MOBILE BUTTON */}
           <button
+
+            onClick={() =>
+              setMenuOpen(!menuOpen)
+            }
+
             className="
               lg:hidden
               bg-white/5
@@ -233,16 +253,100 @@ function Navbar() {
               p-3
               rounded-2xl
               backdrop-blur-xl
+              text-white
             "
           >
 
-            <Menu />
+            {menuOpen
+              ? <X />
+              : <Menu />
+            }
 
           </button>
 
         </div>
 
       </div>
+
+      {/* MOBILE SIDEBAR */}
+      <AnimatePresence>
+
+        {menuOpen && (
+
+          <motion.div
+
+            initial={{
+              opacity: 0,
+              y: -20,
+            }}
+
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+
+            exit={{
+              opacity: 0,
+              y: -20,
+            }}
+
+            className="
+              lg:hidden
+              mt-4
+              bg-[#081121]/95
+              border
+              border-white/10
+              backdrop-blur-2xl
+              rounded-3xl
+              p-6
+              shadow-2xl
+            "
+          >
+
+            <ul
+              className="
+                flex
+                flex-col
+                gap-6
+                text-lg
+                text-gray-300
+              "
+            >
+
+              {navItems.map((item, index) => (
+
+                <li key={index}>
+
+                  <a
+                    href={`#${item[1]}`}
+
+                    onClick={() =>
+                      setMenuOpen(false)
+                    }
+
+                    className="
+                      block
+                      hover:text-yellow-400
+                      transition-all
+                      duration-300
+                    "
+                  >
+
+                    {item[0]}
+
+                  </a>
+
+                </li>
+
+              ))}
+
+            </ul>
+
+          </motion.div>
+
+        )}
+
+      </AnimatePresence>
 
     </motion.nav>
 
