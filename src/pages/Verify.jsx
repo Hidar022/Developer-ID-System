@@ -336,7 +336,7 @@ function VerifyPage() {
                 "
               >
 
-                View Profile
+                View Full Profile
 
               </a>
 
