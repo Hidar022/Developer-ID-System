@@ -7,40 +7,39 @@ import {
 
 function Certifications() {
 
-  const certs = [
+const certs = [
 
-    {
-      title: "Introduction to Cybersecurity",
+  {
+    title: "Introduction to Cybersecurity",
 
-      org: "Cisco Networking Academy",
+    org: "Cisco Networking Academy",
 
-      year: "2024",
+    year: "2024",
 
-      // 🔥 REPLACE WITH YOUR REAL CERTIFICATE LINK
-      link: "#",
-    },
+    link: "/certificates/cybersecurity.pdf",
+  },
 
-    {
-      title: "Network Technician Career Path",
+  {
+    title: "Network Technician Career Path",
 
-      org: "Cisco Networking Academy",
+    org: "Cisco Networking Academy",
 
-      year: "2024",
+    year: "2024",
 
-      link: "#",
-    },
+    link: "/certificates/network-tech.pdf",
+  },
 
-    {
-      title: "Web Development Certification",
+  {
+    title: "Web Development Certification",
 
-      org: "KATDICT",
+    org: "KATDICT",
 
-      year: "2025",
+    year: "2025",
 
-      link: "#",
-    },
+    link: "/certificates/web-dev.pdf",
+  },
 
-  ];
+];
 
   return (
     <section id="certifications" className="relative z-40 px-6 md:px-14 py-28">
